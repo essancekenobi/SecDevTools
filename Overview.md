@@ -6,4 +6,4 @@ The framework is essentially a set of [Cucumber](http://cucumber.io) features th
 
 It tests Web Applications and API's from an external point of view and does not require access to the target source code.
 
-BDD-Security uses the ![](http://gradle.wpengine.netdna-cdn.com/wp-content/uploads/2015/10/gradle-logo-horizontal2.svg =250x) build system.
+BDD-Security uses the [Gradle](http://www.gradle.org) build system.
