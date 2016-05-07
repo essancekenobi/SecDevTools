@@ -21,9 +21,9 @@ In order to properly scan an application with [OWASP ZAP](https://www.owasp.org/
 
     <class>net.continuumsecurity.MyComplexApp</class>
 
-A simple example would be:
+A simple example class should extend the **WebApplication** class and implement the **Navigable** interface:
 
-        public class MyComplexApp extends WebApplication {
+        public class MyComplexApp extends WebApplication implements INavigable {
 
         public void navigate() {
             driver.get(Config.getInstance().getBaseUrl() + "user/login");
@@ -56,4 +56,24 @@ And the default login credentials:
 With that done, we can launch the ZAP scanning tests:
 
     ./gradlew -Dcucumber.options="--tags @app_scan --tags ~@skip" test
+
+## Testing SSL
+
+Install the SSLyze package and point config.xml to it:
+
+     <sslyze>
+        <path>/opt/sslyze/sslyze_cli.py</path>
+        <option>--regular</option>
+     </sslyze>
+
+And run the SSL tests:
+
+    ./gradlew -Dcucumber.options="--tags @ssl" test
+
+## Testing Authentication and Session Management
+
+Specific interfaces need to be implemented to test these features: **ILogin** and **ILogout**
+See the RopeyTasksApplication.java file for an example of how to implement these.
+
+
 
