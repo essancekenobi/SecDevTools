@@ -2,11 +2,21 @@
 
 JDK 8
 
-# Getting Started
+## Run the Demo
+### Download a vulnerable web application
+BDD-Security tests web applications and servers from the outside. To get started with a quick demonstration, we provide a vulnerable web application in the form of a self-executing .jar file from [here.](https://github.com/continuumsecurity/RopeyTasks/blob/master/ropeytasks.jar)
 
-## Run the demo
-1. Checkout BDD-Security from github
-2. Download the ropeytasks.jar vulnerable web application
+Launch this application in a terminal:
+     java -jar ropeytasks.jar
+
+### Checkout BDD-Security
+
+     git clone https://github.com/continuumsecurity/RopeyTasks.git
+
+Execute the 'authentication' specification:
+
+    ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip" test
+
+The framework    
     
     
-
