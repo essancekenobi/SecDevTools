@@ -9,3 +9,13 @@ Add a _Post-Build Action_ to publish JUnit test results and set the _Test report
 
 ## Better reporting
 There are at least two HTML reporting plugins that can be used with Cucumber to produce good looking and easily navigable reports:
+
+1. [Cucumber-JVM reports](https://github.com/jenkinsci/cucumber-reports-plugin)
+2. [Bootstrap multi-test results report](https://wiki.jenkins-ci.org/display/JENKINS/Bootstraped+Multi+Test+Results+Report)
+
+### Cucumber-JVM Reports
+Add a _Post-Build Action_ and set the JSON reports path to: build/reports
+
+### Bootstrap multi-test results report
+Add a _Post-Build Action_ and set the JSON reports path to: build/reports
+
