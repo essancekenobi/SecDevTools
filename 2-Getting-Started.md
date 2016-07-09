@@ -16,13 +16,13 @@ Launch this application in a terminal:
 
      git clone https://github.com/continuumsecurity/RopeyTasks.git
 
-Execute only the 'authentication' specification:
+Execute only the 'authentication' feature:
 
-    ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip" test
+    ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
 
 View the test results in ./build/reports/cucumber/pretty/feature-overview.html    
-To execute all the specifications including ZAP scanning:
+To execute all the features including ZAP scanning:
 
-    ./gradlew test
+    ./gradlew
 
 
