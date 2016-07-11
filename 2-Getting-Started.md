@@ -14,7 +14,7 @@ Launch this application in a terminal:
 
 ### Checkout BDD-Security
 
-     git clone https://github.com/continuumsecurity/RopeyTasks.git
+     git clone https://github.com/continuumsecurity/bdd-security.git
 
 Execute only the 'authentication' feature:
 
@@ -24,5 +24,4 @@ View the test results in ./build/reports/cucumber/pretty/feature-overview.html
 To execute all the features including ZAP scanning:
 
     ./gradlew
-
 
