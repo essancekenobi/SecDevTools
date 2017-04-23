@@ -21,4 +21,20 @@ For example to run the 'authentication' and 'http_headers' features but to skip 
 ## From IDE
 Simply run the SecurityTest file as a JUnit test, and specify the cucumber.options as a system property in the run configuration.
 
+## Docker
+Follow the instructions below to create a docker image and run it.
+
+```bash
+# Build the image
+docker build --no-cache -t continuumsecurity/bdd-security .
+
+# run the test suite with the default configuration
+docker run -d continuumsecurity/bdd-security
+
+# run the test suite with custom TAGS and custom URLS
+docker run -d -e "TAGS=@cwe-319-auth" -e "URL=http:\/\/localhost:8080\/xxx/" continuumsecurity/bdd-security
+
+# alternatively you can run the below command to see the logs in the output
+docker run -it continuumsecurity/bdd-security
+```
 
